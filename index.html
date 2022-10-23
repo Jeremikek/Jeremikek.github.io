@@ -14,6 +14,143 @@
     <!-- Google Font -->
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Share Tech Mono' />
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poiret One' />
+    <style>
+        /* Scroll Bar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px; 
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #02577a; 
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #02a9f7; 
+        }
+        /* Scroll Bar */
+        
+        /* Hover Text */
+        .hovertext {
+            position: relative;
+            border-bottom: 1px dotted black;
+            }
+        
+        .hovertext:before {
+            content: attr(data-hover);
+            visibility: hidden;
+            opacity: 0;
+            width: max-content;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px 5px;
+            transition: opacity 1s ease-in-out;
+            
+            position: absolute;
+            z-index: 1;
+            left: 0;
+            top: 110%;
+        }
+        
+        .hovertext:hover:before {
+            opacity: 1;
+            visibility: visible;
+            }
+        /* Hover Text */
+        
+        body {
+            font-family: 'Share Tech Mono';
+            background-color: #001c26;
+            color: #d4f0fc;
+        }
+        
+        section {
+            margin-bottom: 300px;
+        }
+        
+        .w3-card {
+            background-color: #01303f;
+        }
+        
+        .w3-card:hover{
+            background-color: #0193d7;
+        }
+        
+        h1 {
+            font-family: 'Poiret One';
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        
+        .flex {
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+        }
+        
+        .main-pad {
+            padding: 0 20% !important;
+        }
+        
+        #aboutme, #previousproject, #academicbackground, #skillsset, #academicachievement {
+            scroll-margin: 200px;
+        }
+        
+        .elementOnTop {
+            z-index: 10;
+        }
+        
+        .elementToCover {
+            z-index: 1;
+        }
+        
+        /* Animation on scroll */
+        .reveal {
+            position: relative;
+            opacity: 0;
+        }
+        
+        .reveal.active {
+            opacity: 1;
+        }
+        
+        .active.fade-left {
+            animation: fade-left 1s ease-in;
+        }
+        
+        .active.fade-right {
+            animation: fade-right 1s ease-in;
+        }
+        
+        @keyframes fade-left {
+            0% {
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            }
+            @keyframes fade-right {
+            0% {
+                transform: translateX(100px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        /* Animation on scroll */
+    </style>
 </head>
 
 <body>
