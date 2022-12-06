@@ -3,14 +3,16 @@
 <head>
     <title>Jeremi Kek Teng Fong - A Simple Portfolio</title>
     <meta charset="UTF-8">
-    <!--W3 CSS-->
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
     <!--Bootstrap icons-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <!--Devicon-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
-    <!--External CSS-->
-    <link rel="stylesheet" href="style.css"/>
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <!-- Google Font -->
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Share Tech Mono' />
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poiret One' />
@@ -34,83 +36,18 @@
             background: #02a9f7; 
         }
         /* Scroll Bar */
-        
-        /* Hover Text */
-        .hovertext {
-            position: relative;
-            border-bottom: 1px dotted black;
-            }
-        
-        .hovertext:before {
-            content: attr(data-hover);
-            visibility: hidden;
-            opacity: 0;
-            width: max-content;
-            background-color: black;
-            color: #fff;
-            text-align: center;
-            border-radius: 5px;
-            padding: 5px 5px;
-            transition: opacity 1s ease-in-out;
-            
-            position: absolute;
-            z-index: 1;
-            left: 0;
-            top: 110%;
-        }
-        
-        .hovertext:hover:before {
-            opacity: 1;
-            visibility: visible;
-            }
-        /* Hover Text */
-        
+
         body {
             font-family: 'Share Tech Mono';
             background-color: #001c26;
             color: #d4f0fc;
         }
-        
-        section {
-            margin-bottom: 300px;
-        }
-        
-        .w3-card {
-            background-color: #01303f;
-        }
-        
-        .w3-card:hover{
-            background-color: #0193d7;
-        }
-        
-        h1 {
-            font-family: 'Poiret One';
-            font-weight: bold;
-            text-decoration: underline;
-        }
-        
-        .flex {
-            display: flex; 
-            justify-content: center; 
-            align-items: center;
-        }
-        
-        .main-pad {
-            padding: 0 20% !important;
-        }
-        
+
         #aboutme, #previousproject, #academicbackground, #skillsset, #academicachievement {
+            margin-top: 200px;
             scroll-margin: 200px;
         }
-        
-        .elementOnTop {
-            z-index: 10;
-        }
-        
-        .elementToCover {
-            z-index: 1;
-        }
-        
+
         /* Animation on scroll */
         .reveal {
             position: relative;
@@ -138,8 +75,8 @@
                 transform: translateX(0);
                 opacity: 1;
             }
-            }
-            @keyframes fade-right {
+        }
+        @keyframes fade-right {
             0% {
                 transform: translateX(100px);
                 opacity: 0;
@@ -154,280 +91,316 @@
 </head>
 
 <body>
-    <!--HEADER-->
-    <header style="position:fixed; z-index: 10;"> 
-       <div class="w3-container w3-gray" style="display: flex; position: fixed; width: 100%; align-items: stretch;">
-            <h1 style="flex-grow: 1;">JEREMI KEK TENG FONG</h1>
-            <div class="w3-right-align" style="flex-grow: 2; display: flex; justify-content: right; align-items: center;">
-                <a href="#aboutme" class="w3-margin">ABOUT ME</a>
-                <a href="#previousproject" class="w3-margin">PREVIOUS PROJECT</a>
-                <a href="#academicbackground" class="w3-margin">ACADEMIC BACKGROUND</a>
-                <a href="#skillsset" class="w3-margin">SKILLS SET</a>
-                <a href="#academicachievement" class="w3-margin">ACADEMIC ACHIEVEMENT</a>
-            </div>
-        </div> 
-    </header>
+    <!-- Scroll Up Button -->
+    <button type="button" id="scrollbtn" class="d-none btn btn-danger btn-lg rounded-circle m-4 position-fixed bottom-0 end-0"
+        style="height: 50px; width: 50px; z-index: 10;"><i class="bi bi-arrow-up"></i></button>
 
-    <!--ABOUT ME-->
-    <section class="w3-animate-opacity" id="aboutme" style="padding-top: 200px;">
-        <div class="w3-container main-pad">
-            <h1>ABOUT ME</h1>
-            <div>
-                <div class="flex" style="text-align: justify;">
-                    <div class="flex" style="flex-direction: column;">
-                        <a class="w3-margin" href="https://www.linkedin.com/in/jeremi-kek-175158227" target="_blank">
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linkedin/linkedin-plain.svg" alt="LinkedIn Icon" style="width:40px; filter: invert(100%);" />
-                        </a>
-                        <a class="w3-margin" href="https://github.com/Jeremikek" target="_blank" >
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" alt="Github Icon" style="width:40px; filter: invert(100%);" />
-                        </a>
-                    </div>
-                    <img class=" w3-border w3-round-xxlarge" src="src/pic.png" alt="Profile picture" width="400" height="400" style= "margin: 50px 100px;"/>
-                    <div class="flex" style="flex-direction: column;">
-                        <p>Hi! I am <b style="font-size:xx-large; color: 	#89d6fb;">Jeremi</b>. Currently a year 3 Software Engineering student at Universiti Sarawak Malaysia (UNIMAS).
-                        <br/><br/>
-                        Becoming a Software Engineer has always been my dream eversince I became a teenager. Being a kid that spends most of my time playing Minecraft at that time lead me to the world of modding. And from that moment onwards, the door to the world of programming opened infront of me.
-                        </p>
-                        <div class="flex">
-                            <a class="w3-margin" href="src/RESUME_JEREMI_KEK_TENG_FONG.pdf" target="_blank" ><button class="w3-button w3-round-xlarge" style="background-color: #02577a" >RESUME</button></a>
-                            <a class="w3-margin" href="src/CV_JEREMI_KEK_TENG_FONG.pdf" target="_blank" ><button class="w3-button w3-round-xlarge" style="background-color: #02577a">CV</button></a>
-                        </div>
-                        
-                    </div>
-                    
-                    
-                </div>
-            </div>
-        </div>  
-    </section>
-
-    <!--PREVIOUS PROJECT-->
-    <section class="reveal fade-right" id="previousproject">
-        <div class="w3-container">
-            <h1 class="w3-right-align main-pad">PREVIOUS PROJECT</h1>
-            <div class="flex">
-                <div class="w3-container flex" style="width: 70%">
-                    <div class="w3-card w3-round-xlarge flex w3-padding w3-margin" style="flex-direction: column; width: 50%;">
-                        <p>Health Diary</p>
-                        <img src="https://raw.githubusercontent.com/wenjuinchuah/java-project/main/src/images/favicon.png" alt="Health Diary Icon"/>
-                        <p style="text-align: justify;"> Health Diary is a java application that me and my team developed in year 2 Java course. It simulate a mobile application that gathers information and keep track of user's health.</p>
-                        <p class="w3-round-large" style="background-color: #02577a; padding: 3px;">Tech Stack</p>
-                        <div class="w3-round-large w3-padding flex" style="background-color: #01303f">
-                           <span class="hovertext" data-hover="Java">
-                                <img alt="Java" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-plain.svg"> 
-                           </span>
-                        </div>
-                        <a class="w3-margin" href="https://github.com/wenjuinchuah/java-project" target="_blank">
-                            <button class="w3-button">View on GitHub</button>
-                        </a>
-                    </div>
-                    <div class="w3-card w3-round-xlarge flex w3-padding w3-margin" style="flex-direction: column; width: 50%;">
-                        <p>Blood Donation DBMS</p>
-                        <img src="https://raw.githubusercontent.com/wenjuinchuah/database-project/main/src/blood_donation.png" alt="Blood Donation Icon" /> 
-                        <p style="text-align: justify;"> Blood Donation Database Management System is a web application that me and my team developed for the year 2 Database Management coursework. It mainly focuses on the database design and management.</p>
-                        <p class="w3-round-large" style="background-color: #02577a; padding: 3px;">Tech Stack</p>
-                        <div class="w3-round-large w3-padding flex" style="background-color: #01303f">
-                            <span class="hovertext" data-hover="HTML5">
-                                <img alt="HTML5" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-plain-wordmark.svg">
-                            </span>
-                            <span class="hovertext" data-hover="CSS3">
-                                <img alt="css" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-plain.svg">
-                            </span>
-                            <span class="hovertext" data-hover="JavaScript">
-                                <img alt="js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
-                            </span>
-                            <span class="hovertext" data-hover="PHP">
-                                <img alt="php" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-plain.svg">
-                            </span>
-                            <span class="hovertext" data-hover="MySQL">
-                                <img alt="MySQL" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg"> 
-                            </span>
-                            
-                        </div>
-                        <a class="w3-margin" href="https://github.com/wenjuinchuah/database-project" target="_blank">
-                            <button class="w3-button">View on GitHub</button>
-                        </a>
-                    </div>
-                    <div class="w3-card w3-round-xlarge flex w3-padding w3-margin" style="flex-direction: column; width: 50%;">
-                        <p>Greenvy</p>
-                        <img src="https://raw.githubusercontent.com/wenjuinchuah/database-project/main/src/blood_donation.png" alt="Blood Donation Icon" /> 
-                        <p style="text-align: justify;"> Greenvy is a mobile application me and my team developed using Flutter for the 2022 CodeNection Hackathon Competition. It is a mobile application aims to tackle SDG 13 (Climate Action). The mobile application contains a homepage with current environmental statistic and new, a comunity page that acts like a social media and lastly a page where the user has their own personal virtual tree that they can nurture and care. </p>
-                        <p class="w3-round-large" style="background-color: #02577a; padding: 3px;">Tech Stack</p>
-                        <div class="w3-round-large w3-padding flex" style="background-color: #01303f">
-                            <span class="hovertext" data-hover="HTML5">
-                                <img alt="HTML5" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-plain-wordmark.svg">
-                            </span>
-                            <span class="hovertext" data-hover="CSS3">
-                                <img alt="css" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-plain.svg">
-                            </span>
-                            <span class="hovertext" data-hover="JavaScript">
-                                <img alt="js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
-                            </span>
-                            <span class="hovertext" data-hover="PHP">
-                                <img alt="php" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-plain.svg">
-                            </span>
-                            <span class="hovertext" data-hover="MySQL">
-                                <img alt="MySQL" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg"> 
-                            </span>
-                        </div>
-                        <a class="w3-margin" href="https://github.com/wenjuinchuah/greenvy" target="_blank">
-                            <button class="w3-button">View on GitHub</button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div> 
-    </section>
-
-    <!--ACADEMIC BACKGROUND-->
-    <section class="reveal fade-left" id="academicbackground">
-        <div class="w3-container main-pad">
-            <h1>ACADEMIC BACKGROUND</h1>
-            <div class="flex" style="text-align: center;">
-                <div class="w3-card w3-round-xlarge w3-padding w3-margin" style="width: 25%;">
-                    <p>SJK(C) Batu 14</p>
-                </div>
-                <div class="w3-card w3-round-xlarge w3-padding w3-margin" style="width: 25%;">
-                    <p>SMK Dusun Nanding</p>
-                </div>
-                <div class="w3-card w3-round-xlarge w3-padding w3-margin" style="width: 25%;">
-                    <p>SMJK(C) Yu Hua Kajang</p>
-                </div>
-                <div class="w3-card w3-round-xlarge w3-padding w3-margin" style="width: 25%;">
-                    <p>Universiti Sarawak Malaysia (UNIMAS)</p>
-                </div>
-            </div> 
-        </div>  
-    </section>
-
-    <!--SKILLS SET-->
-    <section class="reveal fade-right" id="skillsset">
-        <div class="w3-container main-pad">
-            <h1 class="w3-right-align">SKILLS SET</h1>
-            <div class="flex" style="align-items: flex-start;">
-                <div class="w3-margin w3-cell" style="width:50%; text-align: center">
-                    <button onclick="dropDownOpen(0)" class="w3-button" style="width:100%; height:100%;" >TECHNICAL SKILLS</button>
-                    <div class="drop" style="width:100%; display:none">
-                        <div onmouseover="skillsHover(this, 'Intermediate')" onmouseout="skillsHover(this, 'C')" class="w3-card w3-padding w3-margin">
-                            C
-                        </div>
-                        <div onmouseover="skillsHover(this, 'Intermediate')" onmouseout="skillsHover(this, 'C++')" class="w3-card w3-padding w3-margin">
-                            C++
-                        </div>
-                        <div onmouseover="skillsHover(this, 'Advanced')" onmouseout="skillsHover(this, 'Java')" class="w3-card w3-padding w3-margin">
-                            Java
-                        </div>
-                        <div onmouseover="skillsHover(this, 'Advanced')" onmouseout="skillsHover(this, 'HTML5')" class="w3-card w3-padding w3-margin">
-                            HTML5
-                        </div>
-                        <div onmouseover="skillsHover(this, 'Advanced')" onmouseout="skillsHover(this, 'JS')" class="w3-card w3-padding w3-margin">
-                            JS
-                        </div>
-                        <div onmouseover="skillsHover(this, 'Advanced')" onmouseout="skillsHover(this, 'PHP')" class="w3-card w3-padding w3-margin">
-                            PHP
-                        </div>
-                        <div onmouseover="skillsHover(this, 'Advanced')" onmouseout="skillsHover(this, 'MySQL')" class="w3-card w3-padding w3-margin">
-                            MySQL
-                        </div>
-                        <div onmouseover="skillsHover(this, 'Intermediate')" onmouseout="skillsHover(this, 'CSS3')" class="w3-card w3-padding w3-margin">
-                            CSS3
-                        </div>
-                        <div onmouseover="skillsHover(this, 'Beginner')" onmouseout="skillsHover(this, 'Angular')" class="w3-card w3-padding w3-margin">
-                            Angular
-                        </div>
-                        <div onmouseover="skillsHover(this, 'Beginner')" onmouseout="skillsHover(this, 'React')" class="w3-card w3-padding w3-margin">
-                            React
-                        </div>
-                    </div>
-                </div>
-
-                <div class="w3-margin w3-cell" style="width:50%; text-align: center">
-                    <button onclick="dropDownOpen(1)" class="w3-button" style="width:100%; height:100%;">LANGUAGE PROFICIENCY</button>
-                    <div class="drop" style="width:100%; display:none">
-                        <div onmouseover="skillsHover(this, 'Profecient')" onmouseout="skillsHover(this, 'Malay')" class="w3-card w3-padding w3-margin">
-                            Malay
-                        </div>
-                        <div onmouseover="skillsHover(this, 'Native')" onmouseout="skillsHover(this, 'Chinese')"  class="w3-card w3-padding w3-margin">
-                            Chinese
-                        </div>
-                        <div onmouseover="skillsHover(this, 'Professional')" onmouseout="skillsHover(this, 'English')"  class="w3-card w3-padding w3-margin">
-                            English
-                        </div>
-                        <div onmouseover="skillsHover(this, 'Beginner')" onmouseout="skillsHover(this, 'Japanese')"  class="w3-card w3-padding w3-margin">
-                            Japanese
-                        </div>
-                        <div onmouseover="skillsHover(this, 'Beginner')" onmouseout="skillsHover(this, 'French')"  class="w3-card w3-padding w3-margin">
-                            French
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> 
-    </section>
-
-    <!--ACADEMIC ACHIEVEMENT-->
-    <section class="reveal fade-left" id="academicachievement">
-        <div class="w3-container main-pad">
-            <h1>ACADEMIC ACHIEVEMENT</h1>
-            <div class="w3-card w3-round-xlarge w3-padding w3-margin">
-                <p>STPM - 3.17 CGPA</p>
-            </div>
-            <div class="w3-card w3-round-xlarge w3-padding w3-margin">
-                <p>MALAYSIAN UNIVERSITY ENGLISH TEST BAND 5</p>
-            </div>
-            <div class="w3-card w3-round-xlarge w3-padding w3-margin">
-                <p>DEAN LIST AWARD SEMESTER 1 (2020/2021) GPA-3.91</p>
-            </div>
-            <div class="w3-card w3-round-xlarge w3-padding w3-margin">
-                <p>DEAN LIST AWARD SEMESTER 2 (2020/2021) GPA-4.0</p>
-            </div>
-            <div class="w3-card w3-round-xlarge w3-padding w3-margin">
-                <p>DEAN LIST AWARD SEMESTER 3 (2021/2022) GPA-4.0</p>
-            </div>
-            <div class="w3-card w3-round-xlarge w3-padding w3-margin">
-                <p>DEAN LIST AWARD SEMESTER 4 (2021/2022) GPA-4.0</p>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgb(109, 109, 109);">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><h2>JEREMI KEK TENG FONG</h2></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item">
+                        <a href="#aboutme" class="nav-link text-white">ABOUT ME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#previousproject" class="nav-link text-white">PREVIOUS PROJECT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#academicbackground" class="nav-link text-white">ACADEMIC BACKGROUND</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#skillsset" class="nav-link text-white">SKILLS SET</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#academicachievement" class="nav-link text-white">ACADEMIC ACHIEVEMENT</a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </section>
+    </nav>
+
+    <div class="container w-75 d-flex flex-column" id="aboutme"> 
+        <!--ABOUT ME-->
+        <div class="container">
+            <h1>ABOUT ME</h1>
+            <div class="d-flex p-3">
+                <div class="d-flex flex-column justify-content-center">
+                    <a class="m-2" href="https://www.linkedin.com/in/jeremi-kek-175158227" target="_blank">
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linkedin/linkedin-plain.svg" alt="LinkedIn Icon" style="width:40px; filter: invert(100%);" />
+                    </a>
+                    <a class="m-2" href="https://github.com/Jeremikek" target="_blank" >
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" alt="Github Icon" style="width:40px; filter: invert(100%);" />
+                    </a>
+                </div>
+                <img class="rounded-3" src="src/pic.png" alt="Profile picture" width="400" height="400" style= "margin: 50px 100px; border: solid white 3px"/>
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <p>Hi! I am <b style="font-size:xx-large; color: #89d6fb;">Jeremi</b>. Currently a year 3 Software Engineering student at Universiti Sarawak Malaysia (UNIMAS).
+                    <br/><br/>
+                    Becoming a Software Engineer has always been my dream eversince I became a teenager. Being a kid that spends most of my time playing Minecraft at that time lead me to the world of modding. And from that moment onwards, the door to the world of programming opened infront of me.</p>
+                    <div class="d-flex">
+                        <a class="m-2" href="src/RESUME_JEREMI_KEK_TENG_FONG.pdf" target="_blank" ><button class="btn btn-secondary" style="background-color: #02577a" >RESUME</button></a>
+                        <a class="m-2" href="src/CV_JEREMI_KEK_TENG_FONG.pdf" target="_blank" ><button class="btn btn-secondary" style="background-color: #02577a">CV</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--PREVIOUS PROJECT-->
+        <div class="container reveal fade-right" id="previousproject" data-mdb-animation-on-scroll="repeat" data-mdb-toggle="animation" data-mdb-animation="slide-out-right">
+            <h1 class="text-end">PREVIOUS PROJECT</h1>
+            <div class="mt-5 d-flex gap-3">
+                <!-- Health Diary -->
+                <div class="container rounded-3 d-flex flex-column align-items-center justify-content-between flex-fill p-3" style="border: solid white 2px">
+                    <p>Health Diary</p>
+                    <img src="https://raw.githubusercontent.com/wenjuinchuah/java-project/main/src/images/favicon.png" alt="Health Diary Icon" style="width: 70px; height: 70px"/>
+                    <p style="text-align: justify;"> Health Diary is a java application that me and my team developed in year 2 Java course. It simulate a mobile application that gathers information and keep track of user's health.</p>
+                    <p class="rounded-3 p-2" style="background-color: #02577a;">Tech Stack</p>
+                    <div class="d-flex rounded-3 p-2" style="background-color: #01303f">
+                        <span class="hovertext" data-hover="Java">
+                            <img alt="Java" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-plain.svg">
+                        </span>
+                    </div>
+                    <a class="m-2" href="https://github.com/wenjuinchuah/java-project" target="_blank">
+                        <button class="btn btn-primary">View on GitHub</button>
+                    </a>
+                </div>
+
+                <!-- Blood Donation -->
+                <div class="container rounded-3 d-flex flex-column align-items-center justify-content-between flex-fill p-3" style="border: solid white 2px">
+                    <p>Blood Donation DBMS</p>
+                    <img src="https://raw.githubusercontent.com/wenjuinchuah/database-project/main/src/blood_donation.png" alt="Blood Donation Icon" style="width: 70px; height: 70px"/>
+                    <p style="text-align: justify;"> Blood Donation Database Management System is a web application that me and my team developed for the year 2 Database Management coursework. It mainly focuses on the database design and management.</p>
+                    <p class="rounded-3 p-2" style="background-color: #02577a; padding: 3px;">Tech Stack</p>
+                    <div class="d-flex rounded-3 p-2" style="background-color: #01303f">
+                        <span class="hovertext" data-hover="HTML5">
+                            <img alt="HTML5" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-plain-wordmark.svg">
+                        </span>
+                        <span class="hovertext" data-hover="CSS3">
+                            <img alt="css" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-plain.svg">
+                        </span>
+                        <span class="hovertext" data-hover="JavaScript">
+                            <img alt="js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
+                        </span>
+                        <span class="hovertext" data-hover="PHP">
+                            <img alt="php" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-plain.svg">
+                        </span>
+                        <span class="hovertext" data-hover="MySQL">
+                            <img alt="MySQL" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg">
+                        </span>
+                    </div>
+                    <a class="m-2" href="https://github.com/wenjuinchuah/database-project" target="_blank">
+                        <button class="btn btn-primary">View on GitHub</button>
+                    </a>
+                </div>
+
+                <!-- Greenvy -->
+                <div class="container rounded-3 d-flex flex-column align-items-center justify-content-between flex-fill p-3" style="border: solid white 2px">
+                    <p>Greenvy</p>
+                    <img src="src/greenvy_icon.png" alt="Greenvy Icon" style="width: 70px; height: 70px"/>
+                    <p style="text-align: justify;"> 
+                        Greenvy is a mobile application me and my team developed using Flutter for the 2022 CodeNection Hackathon Competition. It is a mobile application aims to tackle SDG 13 (Climate Action). 
+                        <button id="greenvyShowMoreBtn" class="btn text-muted" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGreenvy" aria-expanded="true">Show More</button> 
+                        <span class="collapse" id="collapseGreenvy">The mobile application contains a homepage with current environmental statistic and new, a comunity page that acts like a social media and lastly a page where the user has their own personal virtual tree that they can nurture and care.  </span>
+                        <button id="greenvyShowLessBtn" class="btn text-muted d-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGreenvy" aria-expanded="true">Show Less</button>
+                    </p>
+                    <p class="rounded-3 p-2" style="background-color: #02577a; padding: 3px;">Tech Stack</p>
+                    <div class="d-flex rounded-3 p-2" style="background-color: #01303f">
+                        <span class="hovertext" data-hover="Dart">
+                            <img alt="Dart" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/dart/dart-plain.svg">
+                    </div>
+                    <!--<a class="m-2" href="https://github.com/wenjuinchuah/greenvy" target="_blank">
+                        <button class="btn btn-primary">View on GitHub</button>
+                    </a>-->
+                </div>
+            </div>
+        </div>
+
+        <!--ACADEMIC BACKGROUND-->
+        <div class="container reveal fade-left" id="academicbackground">
+            <h1>ACADEMIC BACKGROUND</h1>
+            <div class="d-flex text-center mt-5">
+                <div class="flex-fill rounded-3 p-2 m-2">
+                    <p>SJK(C) Batu 14</p>
+                </div>
+                <div class="flex-fill rounded-3 p-2 m-2">
+                    <p>SMK Dusun Nanding</p>
+                </div>
+                <div class="flex-fill rounded-3 p-2 m-2">
+                    <p>SMJK(C) Yu Hua Kajang</p>
+                </div>
+                <div class="flex-fill rounded-3 p-2 m-2">
+                    <p>Universiti Sarawak Malaysia (UNIMAS)</p>
+                </div>
+            </div>
+        </div>
+
+        <!--SKILLS SET-->
+        <div class="container reveal fade-right" id="skillsset">
+            <h1 class="text-end">SKILLS SET</h1>
+            <div class="d-flex gap-5 mt-5">
+                <!-- Technical Skills -->
+                <div class="w3-margin w3-cell w-50 text-center">
+                    <button class="btn btn-secondary w-100" type="button" data-bs-toggle="collapse" data-bs-target="#technicalDropdown" aria-expanded="false" aria-controls="technicalDropdown">TECHNICAL SKILLS</button>
+                    <div id="technicalDropdown" class="collapse">
+                        <div class="d-flex flex-column gap-3 mt-3">
+                            <div onmouseover="skillsHover(this, 'Intermediate')" onmouseout="skillsHover(this, 'C')">
+                                C
+                            </div>
+                            <div onmouseover="skillsHover(this, 'Intermediate')" onmouseout="skillsHover(this, 'C++')">
+                                C++
+                            </div>
+                            <div onmouseover="skillsHover(this, 'Advanced')" onmouseout="skillsHover(this, 'Java')">
+                                Java
+                            </div>
+                            <div onmouseover="skillsHover(this, 'Advanced')" onmouseout="skillsHover(this, 'HTML5')">
+                                HTML5
+                            </div>
+                            <div onmouseover="skillsHover(this, 'Advanced')" onmouseout="skillsHover(this, 'JS')">
+                                JS
+                            </div>
+                            <div onmouseover="skillsHover(this, 'Advanced')" onmouseout="skillsHover(this, 'PHP')">
+                                PHP
+                            </div>
+                            <div onmouseover="skillsHover(this, 'Advanced')" onmouseout="skillsHover(this, 'MySQL')">
+                                MySQL
+                            </div>
+                            <div onmouseover="skillsHover(this, 'Intermediate')" onmouseout="skillsHover(this, 'CSS3')">
+                                CSS3
+                            </div>
+                            <div onmouseover="skillsHover(this, 'Intermediate')" onmouseout="skillsHover(this, 'Laravel')">
+                                Laravel
+                            </div>
+                            <div onmouseover="skillsHover(this, 'Beginner')" onmouseout="skillsHover(this, 'Flutter')">
+                                Flutter
+                            </div>
+                            <div onmouseover="skillsHover(this, 'Beginner')" onmouseout="skillsHover(this, 'Angular')">
+                                Angular
+                            </div>
+                            <div onmouseover="skillsHover(this, 'Beginner')" onmouseout="skillsHover(this, 'React')">
+                                React
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Langugae Profficiency -->
+                <div class="w3-margin w3-cell w-50 text-center">
+                    <button class="btn btn-secondary w-100" type="button" data-bs-toggle="collapse" data-bs-target="#languageDropdown" aria-expanded="false" aria-controls="languageDropdown">LANGUAGE PROFICIENCY</button>
+                    <div id="languageDropdown" class="collapse">
+                        <div class="d-flex flex-column gap-3 mt-3">
+                            <div onmouseover="skillsHover(this, 'Profecient')" onmouseout="skillsHover(this, 'Malay')">
+                                Malay
+                            </div>
+                            <div onmouseover="skillsHover(this, 'Native')" onmouseout="skillsHover(this, 'Chinese')" >
+                                Chinese
+                            </div>
+                            <div onmouseover="skillsHover(this, 'Professional')" onmouseout="skillsHover(this, 'English')" >
+                                English
+                            </div>
+                            <div onmouseover="skillsHover(this, 'Beginner')" onmouseout="skillsHover(this, 'Japanese')" >
+                                Japanese
+                            </div>
+                            <div onmouseover="skillsHover(this, 'Beginner')" onmouseout="skillsHover(this, 'French')" >
+                                French
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--ACADEMIC ACHIEVEMENT-->
+        <div class="container reveal fade-left" id="academicachievement" style="margin-bottom: 200px;">
+            <h1>ACADEMIC ACHIEVEMENT</h1>
+            <div class="mt-5 d-flex flex-column gap-3">
+                <div class="container btn btn-secondary ">
+                    STPM - 3.17 CGPA
+                </div>
+                <div class="container btn btn-secondary ">
+                    MALAYSIAN UNIVERSITY ENGLISH TEST BAND 5
+                </div>
+                <div class="container btn btn-secondary ">
+                    DEAN LIST AWARD SEMESTER 1 (2020/2021) GPA-3.91
+                </div>
+                <div class="container btn btn-secondary ">
+                    DEAN LIST AWARD SEMESTER 2 (2020/2021) GPA-4.0
+                </div>
+                <div class="container btn btn-secondary ">
+                    DEAN LIST AWARD SEMESTER 3 (2021/2022) GPA-4.0
+                </div>
+                <div class="container btn btn-secondary ">
+                    DEAN LIST AWARD SEMESTER 4 (2021/2022) GPA-4.0
+                </div>
+                <div class="container btn btn-secondary ">
+                    2022 CodeNection Hackathon Finalist (4th Place)
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!--CONTACT ME-->
-    <footer>
-        <div class="w3-container w3-gray main-pad">
-            <h1 class="w3-center">CONTACT ME</h1>
-            <div class="flex">
-                <a class="w3-margin" href="https://www.linkedin.com/in/jeremi-kek-175158227" target="_blank">
-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linkedin/linkedin-plain.svg" alt="LinkedIn Icon" style="width:40px;" />
-                </a>
-                <a class="w3-margin" href="https://github.com/Jeremikek" target="_blank" >
-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" alt="Github Icon" style="width:40px;" />
-                </a>
-            </div>
-            <br/>
-        </div>  
-    </footer>
-    
+    <div class="container-fluid pt-3" style="background-color: rgb(109,109,109);">
+        <h1 class="text-center">CONTACT ME</h1>
+        <div class="d-flex justify-content-center gap-4">
+            <a href="https://www.linkedin.com/in/jeremi-kek-175158227" target="_blank">
+                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linkedin/linkedin-plain.svg" alt="LinkedIn Icon" style="width:40px;" />
+            </a>
+            <a href="https://github.com/Jeremikek" target="_blank" >
+                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" alt="Github Icon" style="width:40px;" />
+            </a>
+        </div>
+        <br/>
+    </div>  
 
     <script>
-        function dropDownOpen(index){
-            const x = document.getElementsByClassName("drop");
-            if(x[index].className.indexOf("w3-show") == -1){
-                x[index].className += " w3-show";
-            }else{
-                x[index].className = x[index].className.replace(" w3-show", "");
-            }
-        }
-
         function skillsHover(element, text){
             element.innerHTML = text;
         }
 
-        function logoHover(){
+        $('#collapseGreenvy').on("show.bs.collapse", ()=>{
+            $('#greenvyShowMoreBtn').addClass('d-none')
+            $('#greenvyShowLessBtn').removeClass('d-none')
+        });
 
+        $('#collapseGreenvy').on("hidden.bs.collapse", ()=>{
+            $('#greenvyShowLessBtn').addClass('d-none')
+            $('#greenvyShowMoreBtn').removeClass('d-none')
+        });
+
+        //scroll up button
+        document.addEventListener('DOMContentLoaded', init, false);
+
+        function init() {
+            const scrollbtn = document.getElementById("scrollbtn");
+            window.onscroll = function() {
+                if (
+                    document.body.scrollTop > 300 ||
+                    document.documentElement.scrollTop > 300
+                ) {
+                    scrollbtn.classList.remove('d-none');
+                } else {
+                    scrollbtn.classList.add('d-none');
+                }
+            };
+
+            scrollbtn.addEventListener("click", () => {
+                setTimeout(() => {
+                    document.body.scrollTop = 0;
+                    document.documentElement.scrollTop = 0;
+                }, 200)
+            });
         }
 
         // Animation during scroll //
         function reveal() {
         var reveals = document.querySelectorAll(".reveal");
+        var navGroup = document.querySelectorAll(".nav-link");
 
         for (var i = 0; i < reveals.length; i++) {
             var windowHeight = window.innerHeight;
@@ -443,6 +416,7 @@
         }
 
         window.addEventListener("scroll", reveal);
+        
         
     </script>
 

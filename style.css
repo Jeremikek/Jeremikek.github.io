@@ -48,50 +48,14 @@
     }
   /* Hover Text */
   
-  body {
-      font-family: 'Share Tech Mono';
-      background-color: #001c26;
-      color: #d4f0fc;
-  }
-  
-  section {
-      margin-bottom: 300px;
-  }
-  
-  .w3-card {
-      background-color: #01303f;
-  }
-  
-  .w3-card:hover{
-      background-color: #0193d7;
-  }
-  
-  h1 {
-      font-family: 'Poiret One';
-      font-weight: bold;
-      text-decoration: underline;
-  }
-  
-  .flex {
-      display: flex; 
-      justify-content: center; 
-      align-items: center;
-  }
-  
-  .main-pad {
-      padding: 0 20% !important;
-  }
-  
   #aboutme, #previousproject, #academicbackground, #skillsset, #academicachievement {
       scroll-margin: 200px;
   }
-  
-  .elementOnTop {
-      z-index: 10;
-  }
-  
-  .elementToCover {
-      z-index: 1;
+
+  body {
+    font-family: 'Share Tech Mono';
+    background-color: #001c26;
+    color: #d4f0fc;
   }
   
   /* Animation on scroll */
