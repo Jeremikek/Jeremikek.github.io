@@ -87,13 +87,29 @@
             }
         }
         /* Animation on scroll */
+
+        @media (max-width: 1000px){
+            #aboutme, #previousproject, #academicbackground, #skillsset, #academicachievement {
+                min-width: 95% !important;
+                width: 95% !important;
+            }
+            html {
+                font-size: 2rem;
+            }
+            #previousproject img, #aboutme #links img, #footer img{
+                width: 100px;
+                height: 100px;
+            }
+        }
     </style>
 </head>
 
 <body>
     <!-- Scroll Up Button -->
-    <button type="button" id="scrollbtn" class="d-none btn btn-danger btn-lg rounded-circle m-4 position-fixed bottom-0 end-0"
-        style="height: 50px; width: 50px; z-index: 10;"><i class="bi bi-arrow-up"></i></button>
+    <div class="d-none d-lg-block">
+        <button type="button" id="scrollbtn" class="d-none btn btn-danger btn-lg rounded-circle m-4 position-fixed bottom-0 end-0"
+            style="height: 50px; width: 50px; z-index: 10;"><i class="bi bi-arrow-up"></i></button>
+    </div>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgb(109, 109, 109);">
@@ -125,22 +141,25 @@
         </div>
     </nav>
 
+
     <div class="container w-75 d-flex flex-column" id="aboutme"> 
         <!--ABOUT ME-->
         <div class="container">
             <h1>ABOUT ME</h1>
-            <div class="d-flex p-3">
-                <div class="d-flex flex-column justify-content-center">
-                    <a class="m-2" href="https://www.linkedin.com/in/jeremi-kek-175158227" target="_blank">
-                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linkedin/linkedin-plain.svg" alt="LinkedIn Icon" style="width:40px; filter: invert(100%);" />
-                    </a>
-                    <a class="m-2" href="https://github.com/Jeremikek" target="_blank" >
-                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" alt="Github Icon" style="width:40px; filter: invert(100%);" />
-                    </a>
+            <div class="d-flex p-3 flex-column flex-lg-row">
+                <div class="d-flex">
+                    <div class="d-flex flex-column justify-content-center" id="links">
+                        <a class="m-2" href="https://www.linkedin.com/in/jeremi-kek-175158227" target="_blank">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linkedin/linkedin-plain.svg" alt="LinkedIn Icon" width="40px" style="filter: invert(100%);" />
+                        </a>
+                        <a class="m-2" href="https://github.com/Jeremikek" target="_blank" >
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" alt="Github Icon" width="40px" style="filter: invert(100%);" />
+                        </a>
+                    </div>
+                    <img class="rounded-3" src="src/pic.jpg" alt="Profile picture" width="400" height="400" style= "margin: 50px 100px; border: solid white 3px"/>
                 </div>
-                <img class="rounded-3" src="src/pic.jpg" alt="Profile picture" width="400" height="400" style= "margin: 50px 100px; border: solid white 3px"/>
-                <div class="d-flex flex-column justify-content-center align-items-center">
-                    <p class="text-justify">Hi! I am <b style="font-size:xx-large; color: #89d6fb;">Jeremi</b>. Currently a year 3 Software Engineering student at Universiti Sarawak Malaysia (UNIMAS).
+                <div class="d-flex flex-column justify-content-center align-items-center ">
+                    <p class="text-jusitfy">Hi! I am <b style="font-size:xx-large; color: #89d6fb;">Jeremi</b>. Currently a year 3 Software Engineering student at Universiti Sarawak Malaysia (UNIMAS).
                     <br/><br/>
                     Becoming a Software Engineer has always been my dream eversince I became a teenager. Being a kid that spends most of my time playing Minecraft at that time lead me to the world of modding. And from that moment onwards, the door to the world of programming opened infront of me.</p>
                     <div class="d-flex">
@@ -154,11 +173,11 @@
         <!--PREVIOUS PROJECT-->
         <div class="container reveal fade-right" id="previousproject" data-mdb-animation-on-scroll="repeat" data-mdb-toggle="animation" data-mdb-animation="slide-out-right">
             <h1 class="text-end">PREVIOUS PROJECT</h1>
-            <div class="mt-5 d-flex gap-3">
+            <div class="mt-5 d-flex gap-3 flex-column flex-lg-row">
                 <!-- Health Diary -->
                 <div class="container rounded-3 d-flex flex-column align-items-center justify-content-between flex-fill p-3" style="border: solid white 2px">
                     <p>Health Diary</p>
-                    <img src="https://raw.githubusercontent.com/wenjuinchuah/java-project/main/src/images/favicon.png" alt="Health Diary Icon" style="width: 70px; height: 70px"/>
+                    <img src="https://raw.githubusercontent.com/wenjuinchuah/java-project/main/src/images/favicon.png" alt="Health Diary Icon" width="70px" height="70px"/>
                     <p style="text-align: justify;"> Health Diary is a java application that me and my team developed in year 2 Java course. It simulate a mobile application that gathers information and keep track of user's health.</p>
                     <p class="rounded-3 p-2" style="background-color: #02577a;">Tech Stack</p>
                     <div class="d-flex rounded-3 p-2" style="background-color: #01303f">
@@ -174,7 +193,7 @@
                 <!-- Blood Donation -->
                 <div class="container rounded-3 d-flex flex-column align-items-center justify-content-between flex-fill p-3" style="border: solid white 2px">
                     <p>Blood Donation DBMS</p>
-                    <img src="https://raw.githubusercontent.com/wenjuinchuah/database-project/main/src/blood_donation.png" alt="Blood Donation Icon" style="width: 70px; height: 70px"/>
+                    <img src="https://raw.githubusercontent.com/wenjuinchuah/database-project/main/src/blood_donation.png" alt="Blood Donation Icon" width="70px" height="70px"/>
                     <p style="text-align: justify;"> Blood Donation Database Management System is a web application that me and my team developed for the year 2 Database Management coursework. It mainly focuses on the database design and management.</p>
                     <p class="rounded-3 p-2" style="background-color: #02577a; padding: 3px;">Tech Stack</p>
                     <div class="d-flex rounded-3 p-2" style="background-color: #01303f">
@@ -202,11 +221,11 @@
                 <!-- Greenvy -->
                 <div class="container rounded-3 d-flex flex-column align-items-center justify-content-between flex-fill p-3" style="border: solid white 2px">
                     <p>Greenvy</p>
-                    <img src="src/greenvy_icon.png" alt="Greenvy Icon" style="width: 70px; height: 70px"/>
+                    <img src="src/greenvy_icon.png" alt="Greenvy Icon" width="70px" height="70px"/>
                     <p style="text-align: justify;"> 
                         Greenvy is a mobile application me and my team developed using Flutter for the 2022 CodeNection Hackathon Competition. It is a mobile application aims to tackle SDG 13 (Climate Action). 
                         <button id="greenvyShowMoreBtn" class="btn text-muted" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGreenvy" aria-expanded="true">Show More</button> 
-                        <span class="collapse" id="collapseGreenvy">The mobile application contains a homepage with current environmental statistics and news, a comunity page that acts like a social media and lastly a page where the user has their own personal virtual tree that they can nurture and care.  </span>
+                        <span class="collapse" id="collapseGreenvy">The mobile application contains a homepage with current environmental statistic and new, a comunity page that acts like a social media and lastly a page where the user has their own personal virtual tree that they can nurture and care.  </span>
                         <button id="greenvyShowLessBtn" class="btn text-muted d-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGreenvy" aria-expanded="true">Show Less</button>
                     </p>
                     <p class="rounded-3 p-2" style="background-color: #02577a; padding: 3px;">Tech Stack</p>
@@ -243,9 +262,9 @@
         <!--SKILLS SET-->
         <div class="container reveal fade-right" id="skillsset">
             <h1 class="text-end">SKILLS SET</h1>
-            <div class="d-flex gap-5 mt-5">
+            <div class="d-flex gap-5 mt-5 flex-column flex-lg-row">
                 <!-- Technical Skills -->
-                <div class="w3-margin w3-cell w-50 text-center">
+                <div class="container text-center">
                     <button class="btn btn-secondary w-100" type="button" data-bs-toggle="collapse" data-bs-target="#technicalDropdown" aria-expanded="false" aria-controls="technicalDropdown">TECHNICAL SKILLS</button>
                     <div id="technicalDropdown" class="collapse">
                         <div class="d-flex flex-column gap-3 mt-3">
@@ -290,7 +309,7 @@
                 </div>
 
                 <!-- Langugae Profficiency -->
-                <div class="w3-margin w3-cell w-50 text-center">
+                <div class="container text-center">
                     <button class="btn btn-secondary w-100" type="button" data-bs-toggle="collapse" data-bs-target="#languageDropdown" aria-expanded="false" aria-controls="languageDropdown">LANGUAGE PROFICIENCY</button>
                     <div id="languageDropdown" class="collapse">
                         <div class="d-flex flex-column gap-3 mt-3">
@@ -345,14 +364,14 @@
     </div>
 
     <!--CONTACT ME-->
-    <div class="container-fluid pt-3" style="background-color: rgb(109,109,109);">
+    <div id="footer" class="container-fluid pt-3" style="background-color: rgb(109,109,109);">
         <h1 class="text-center">CONTACT ME</h1>
         <div class="d-flex justify-content-center gap-4">
             <a href="https://www.linkedin.com/in/jeremi-kek-175158227" target="_blank">
-                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linkedin/linkedin-plain.svg" alt="LinkedIn Icon" style="width:40px;" />
+                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linkedin/linkedin-plain.svg" alt="LinkedIn Icon" width="40px" />
             </a>
             <a href="https://github.com/Jeremikek" target="_blank" >
-                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" alt="Github Icon" style="width:40px;" />
+                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" alt="Github Icon" width="40px" />
             </a>
         </div>
         <br/>
