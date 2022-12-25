@@ -13,6 +13,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <!-- Typed -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <!-- flexslider -->
     <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.0/flexslider.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.0/jquery.flexslider.js"></script>-->
@@ -59,6 +61,10 @@
         
         .reveal.active {
             opacity: 1;
+        }
+
+        .nav-item.active{
+            text-decoration: underline;
         }
         
         .active.fade-left {
@@ -127,7 +133,7 @@
             
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul class="nav navbar-nav">
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a href="#aboutme" class="nav-link text-white">ABOUT ME</a>
                     </li>
                     <li class="nav-item">
@@ -148,7 +154,7 @@
     </nav>
 
 
-    <div class="container w-75 d-flex flex-column" id="aboutme"> 
+    <div class="container w-75 d-flex flex-column section" id="aboutme"> 
         <!--ABOUT ME-->
         <div class="container">
             <h1>ABOUT ME</h1>
@@ -165,7 +171,11 @@
                     <img class="rounded-3" src="src/pic.jpg" alt="Profile picture" width="400" height="400" style= "margin: 50px 100px; border: solid white 3px"/>
                 </div>
                 <div class="d-flex flex-column justify-content-center align-items-center ">
-                    <p style="text-align: justify;">Hi! I am <b id="name" style="font-size:xx-large; color: #89d6fb;">Jeremi</b>. Currently a year 3 Software Engineering student at Universiti Sarawak Malaysia (UNIMAS).
+                    <p style="text-align: justify;">Hi! I am <b id="name" style="font-size:xx-large; color: #89d6fb;">Jeremi</b>.</p>
+
+                    <h3 style="text-align: justify;">I am a <strong id="typed"></strong></h3>
+                    
+                    <p style="text-align: justify;">Currently a year 3 Software Engineering student at Universiti Sarawak Malaysia (UNIMAS).
                     <br/><br/>
                     Becoming a Software Engineer has always been my dream eversince I became a teenager. Being a kid that spends most of my time playing Minecraft at that time lead me to the world of modding. And from that moment onwards, the door to the world of programming opened infront of me.</p>
                     <div class="d-flex">
@@ -177,7 +187,7 @@
         </div>
 
         <!--PREVIOUS PROJECT-->
-        <div class="container reveal fade-right" id="previousproject" data-mdb-animation-on-scroll="repeat" data-mdb-toggle="animation" data-mdb-animation="slide-out-right">
+        <div class="container reveal fade-right section" id="previousproject" data-mdb-animation-on-scroll="repeat" data-mdb-toggle="animation" data-mdb-animation="slide-out-right">
             <h1 class="text-end">PREVIOUS PROJECT</h1>
             <div class="mt-5 d-flex gap-3 flex-column flex-lg-row">
                 <!-- Health Diary -->
@@ -247,7 +257,7 @@
         </div>
 
         <!--ACADEMIC BACKGROUND-->
-        <div class="container reveal fade-left" id="academicbackground">
+        <div class="container reveal fade-left section" id="academicbackground">
             <h1>ACADEMIC BACKGROUND</h1>
             <div class="d-flex text-center mt-5">
                 <div class="flex-fill rounded-3 p-2 m-2">
@@ -266,7 +276,7 @@
         </div>
 
         <!--SKILLS SET-->
-        <div class="container reveal fade-right" id="skillsset">
+        <div class="container reveal fade-right section" id="skillsset">
             <h1 class="text-end">SKILLS SET</h1>
             <div class="d-flex gap-5 mt-5 flex-column flex-lg-row">
                 <!-- Technical Skills -->
@@ -341,7 +351,7 @@
         </div>
 
         <!--ACADEMIC ACHIEVEMENT-->
-        <div class="container reveal fade-left" id="academicachievement" style="margin-bottom: 200px;">
+        <div class="container reveal fade-left section" id="academicachievement" style="margin-bottom: 200px;">
             <h1>ACADEMIC ACHIEVEMENT</h1>
             <div class="mt-5 d-flex flex-column gap-3">
                 <div class="container btn btn-secondary ">
@@ -370,7 +380,7 @@
     </div>
 
     <!--CONTACT ME-->
-    <div id="footer" class="container-fluid pt-3" style="background-color: rgb(109,109,109);">
+    <div id="footer" class="container-fluid pt-3 mt-3" style="background-color: rgb(109,109,109);">
         <h1 class="text-center">CONTACT ME</h1>
         <div class="d-flex justify-content-center gap-4">
             <a href="https://www.linkedin.com/in/jeremi-kek-175158227" target="_blank">
@@ -384,11 +394,12 @@
     </div>  
 
     <script>
-        /*
-        $(window).on('load', function() {
-            $('.flexslider').flexslider();
+        var typed = new Typed('#typed', {
+            strings: ['Student', 'Software Engineer', 'Web Developer'],
+            typeSpeed: 50,
+            loop: true,
+            loopCount: Infinity
         });
-        */
 
         function skillsHover(element, text){
             element.innerHTML = text;
@@ -429,21 +440,37 @@
         }
 
         // Animation during scroll //
-        function reveal() {
-        var reveals = document.querySelectorAll(".reveal");
-        var navGroup = document.querySelectorAll(".nav-link");
+        let navGroup = document.querySelectorAll(".nav-item");
 
-        for (var i = 0; i < reveals.length; i++) {
-            var windowHeight = window.innerHeight;
-            var elementTop = reveals[i].getBoundingClientRect().top;
-            var elementVisible = 150;
-
-            if (elementTop < windowHeight - elementVisible) {
-            reveals[i].classList.add("active");
-            } else {
-            reveals[i].classList.remove("active");
-            }
+        function activeLink(li) {
+            navGroup.forEach((item) => item.classList.remove('active'));
+            li.classList.add('active');
         }
+
+        function reveal() {
+            let reveals = document.querySelectorAll(".reveal");
+            let sections = document.querySelectorAll(".section");
+
+            for (let i = 0; i < reveals.length; i++) {
+                let windowHeight = window.innerHeight;
+                let elementTop = reveals[i].getBoundingClientRect().top;
+                let elementVisible = 150;
+
+                if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+                } else {
+                reveals[i].classList.remove("active");
+                }
+            }
+
+            for(let i = 0; i < sections.length; i++) {
+                let windowHeight = window.innerHeight;
+                let elementTop = sections[i].getBoundingClientRect().top;
+
+                if((elementTop) < windowHeight) {
+                    activeLink(navGroup[i]);
+                }
+            }
         }
 
         window.addEventListener("scroll", reveal);
