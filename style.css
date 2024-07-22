@@ -48,8 +48,8 @@
     }
   /* Hover Text */
   
-  #aboutme, #previousproject, #academicbackground, #skillsset, #academicachievement {
-      scroll-margin: 200px;
+  #aboutme, #previousproject, #workingexperience, #academicbackground, #skillsset, #academicachievement {
+      scroll-margin: 150px;
   }
 
   body {

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,11 +11,15 @@
     <!--Devicon-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
     <!-- JQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
     <!-- Typed -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <!-- Google Font -->
@@ -25,20 +30,21 @@
         ::-webkit-scrollbar {
             width: 10px;
         }
-        
+
         ::-webkit-scrollbar-track {
             background: #f1f1f1;
-            border-radius: 10px; 
-        }
-        
-        ::-webkit-scrollbar-thumb {
-            background: #02577a; 
             border-radius: 10px;
         }
-        
-        ::-webkit-scrollbar-thumb:hover {
-            background: #02a9f7; 
+
+        ::-webkit-scrollbar-thumb {
+            background: #02577a;
+            border-radius: 10px;
         }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #02a9f7;
+        }
+
         /* Scroll Bar */
         :root {
             --bg-color: #001c26;
@@ -49,8 +55,8 @@
             --text-highlight-color: #89d6fb;
             --nav-color: #6d6d6d;
         }
-        
-        html{
+
+        html {
             scroll-behavior: smooth;
         }
 
@@ -64,21 +70,30 @@
             color: var(--text-secondary-color);
         }
 
-        .tech-stack, .tech-div{
-            background-color: var(--bg-secondary-color);;
+        .tech-stack,
+        .tech-div {
+            background-color: var(--bg-secondary-color);
+            ;
         }
 
-        .tertiary-button{
+        .tertiary-button {
             background-color: var(--bg-tertiary-color);
         }
 
-        .award, .technicalDropdown, .languageDropdown {
+        .award,
+        .technicalDropdown,
+        .languageDropdown {
             background-color: var(--bg-tertiary-color);
         }
 
-        #aboutme, #previousproject, #academicbackground, #skillsset, #academicachievement {
-            margin-bottom: 200px;
-            scroll-margin: 200px;
+        #aboutme,
+        #previousproject,
+        #workingexperience,
+        #academicbackground,
+        #skillsset,
+        #academicachievement {
+            margin-bottom: 150px;
+            scroll-margin: 150px;
         }
 
         /* Animation on scroll */
@@ -86,47 +101,55 @@
             position: relative;
             opacity: 0;
         }
-        
+
         .reveal.active {
             opacity: 1;
         }
 
-        .nav-item.active{
+        .nav-item.active {
             text-decoration: underline;
         }
-        
+
         .fade-left {
             animation: fade-left 1s ease-in;
         }
-        
+
         .fade-right {
             animation: fade-right 1s ease-in;
         }
-        
+
         @keyframes fade-left {
             0% {
                 transform: translateX(-100px);
                 opacity: 0;
             }
+
             100% {
                 transform: translateX(0);
                 opacity: 1;
             }
         }
+
         @keyframes fade-right {
             0% {
                 transform: translateX(100px);
                 opacity: 0;
             }
+
             100% {
                 transform: translateX(0);
                 opacity: 1;
             }
         }
+
         /* Animation on scroll */
 
-        @media (max-width: 1000px){
-            #previousproject, #academicbackground, #skillsset, #academicachievement {
+        @media (max-width: 1000px) {
+
+            #previousproject,
+            #academicbackground,
+            #skillsset,
+            #academicachievement {
                 min-width: 95% !important;
                 width: 95% !important;
             }
@@ -137,18 +160,24 @@
 <body>
     <!-- Scroll Up Button -->
     <div class="d-none d-lg-block">
-        <a type="button" id="scrollbtn" class="d-none btn btn-danger btn-lg rounded-circle m-4 position-fixed bottom-0 end-0" style="height: 50px; width: 50px; z-index: 10;"><i class="bi bi-arrow-up"></i></a>
+        <a type="button" id="scrollbtn"
+            class="d-none btn btn-danger btn-lg rounded-circle m-4 position-fixed bottom-0 end-0"
+            style="height: 50px; width: 50px; z-index: 10;"><i class="bi bi-arrow-up"></i></a>
     </div>
 
     <!-- Navbar -->
-    <nav id="nav" class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: var(--nav-color); height: 10vh;">
+    <nav id="nav" class="navbar navbar-expand-lg navbar-dark fixed-top"
+        style="background-color: var(--nav-color); height: 10vh;">
         <div class="container-fluid">
             <a class="navbar-brand fs-2 d-none d-lg-inline" href="#">JEREMI KEK TENG FONG</a>
             <a class="navbar-brand fs-2 d-lg-none" href="#">JEREMI KEK</a>
 
-            <i onClick="changeColor()" class="bi bi-moon fs-4 flex-fill text-end text-lg-start mx-3" type="button" id="viewMode" style="color: var(--text-secondary-color);"></i>
+            <i onClick="changeColor()" class="bi bi-moon fs-4 flex-fill text-end text-lg-start mx-3" type="button"
+                id="viewMode" style="color: var(--text-secondary-color);"></i>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -174,220 +203,94 @@
         </div>
     </nav>
 
-    <div class="container-fluid d-flex flex-column m-0 p-0" > 
+    <div class="container-fluid d-flex flex-column m-0 p-0" id="aboutme">
         <!--ABOUT ME-->
-        <div class="container-fluid d-flex flex-column justify-content-center bg-dark" id="aboutme" style="height: 100vh;">
-            <h1>ABOUT ME</h1>
-            <div class="d-flex p-3 flex-column flex-lg-row">
-                <div class="d-flex flex-fill justify-content-center">
-                    <div class="d-flex flex-column justify-content-center" id="links">
-                        <a class="m-2 invert-icon" href="https://www.linkedin.com/in/jeremi-kek-175158227" target="_blank">
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linkedin/linkedin-plain.svg" alt="LinkedIn Icon" width="40px" style="filter: invert(100%);" />
-                        </a>
-                        <a class="m-2 invert-icon" href="https://github.com/Jeremikek" target="_blank" >
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" alt="Github Icon" width="40px" style="filter: invert(100%);" />
-                        </a>
+        <div class="container-fluid bg-dark" style="padding-top: 10vh; margin-bottom: 200px;">
+            <div class="container d-flex flex-column justify-content-center" style="height: 90vh;">
+                <h1>ABOUT ME</h1>
+                <div class="d-flex p-3 flex-column flex-lg-row">
+                    <div class="d-flex flex-fill justify-content-center me-lg-4">
+                        <div class="d-flex flex-column justify-content-center" id="links">
+                            <a class="m-2 invert-icon" href="https://www.linkedin.com/in/jeremi-kek-175158227"
+                                target="_blank">
+                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linkedin/linkedin-plain.svg"
+                                    alt="LinkedIn Icon" width="40px" style="filter: invert(100%);" />
+                            </a>
+                            <a class="m-2 invert-icon" href="https://github.com/Jeremikek" target="_blank">
+                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg"
+                                    alt="Github Icon" width="40px" style="filter: invert(100%);" />
+                            </a>
+                        </div>
+                        <img id="profilePic" class="rounded-3 ms-3 ms-lg-5" src="src/pic.jpg" alt="Profile picture"
+                            style="border: solid var(--text-color) 3px; min-width: 30vw; max-width: 30vw;" />
                     </div>
-                    <img id="profilePic" class="rounded-3 ms-3 ms-lg-5" src="src/pic.jpg" alt="Profile picture" style="border: solid var(--text-color) 3px; min-width: 30vw; max-width: 30vw;"/>
-                </div>
-                <div class="d-flex flex-fill flex-column justify-content-center align-items-center">
-                    <p style="text-align: justify;">Hi! I am <b id="name" style="font-size:xx-large; color: var(--text-highlight-color)">Jeremi</b>.</p>
+                    <div class="d-flex flex-fill flex-column justify-content-center align-items-center">
+                        <p style="text-align: justify;">Hi! I am <b id="name"
+                                style="font-size:xx-large; color: var(--text-highlight-color)">Jeremi</b>.</p>
+                        <h3 style="text-align: justify;">I am a <strong id="typed"></strong></h3>
+                        <p style="text-align: justify;">Currently a year 4 Software Engineering student at Universiti
+                            Sarawak Malaysia (UNIMAS).
+                            <br /><br />
+                            Becoming a Software Engineer has always been my dream eversince I became a teenager.
+                        </p>
+                        <div class="d-flex gap-4">
+                            <a class="btn btn-secondary tertiary-button" href="src/RESUME_JEREMI_KEK_TENG_FONG.pdf"
+                                target="_blank" type="button">RESUME</a>
+                            <a class="btn btn-secondary tertiary-button" href="src/CV_JEREMI_KEK_TENG_FONG.pdf"
+                                target="_blank" type="button">CV</a>
+                        </div>
+                        <br>
+                        <p>View My Other Portfolio</p>
+                        <div class="d-flex gap-4">
+                            <a class="btn btn-secondary tertiary-button" href="https://jeremikek.github.io/angular-portfolio/"
+                                target="_blank" type="button">Angular</a>
+                        </div>
+                    </div>
 
-                    <h3 style="text-align: justify;">I am a <strong id="typed"></strong></h3>
-                    
-                    <p style="text-align: justify;">Currently a year 3 Software Engineering student at Universiti Sarawak Malaysia (UNIMAS).
-                    <br/><br/>
-                    Becoming a Software Engineer has always been my dream eversince I became a teenager.</p>
-                    <div class="d-flex gap-4">
-                        <a class="btn btn-secondary tertiary-button" href="src/RESUME_JEREMI_KEK_TENG_FONG.pdf" target="_blank" type="button">RESUME</a>
-                        <a class="btn btn-secondary tertiary-button" href="src/CV_JEREMI_KEK_TENG_FONG.pdf" target="_blank" type="button">CV</a>
-                    </div>
                 </div>
             </div>
         </div>
 
         <!--PREVIOUS PROJECT-->
-        <div class="container reveal fade-right section" id="previousproject" data-mdb-animation-on-scroll="repeat" data-mdb-toggle="animation" data-mdb-animation="slide-out-right">
+        <div class="container reveal fade-right section" id="previousproject" data-mdb-animation-on-scroll="repeat"
+            data-mdb-toggle="animation" data-mdb-animation="slide-out-right">
             <h1 class="text-end">PREVIOUS PROJECT</h1>
             <div id="carouselExampleCaptions" class="carousel slide mt-5" data-bs-ride="carousel">
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                  </div>
-                <div class="carousel-inner">
-                    <!-- Magic Roses Florist Web Application -->
-                    <div class="carousel-item active">
-                        <div class="container rounded-3 p-5 d-flex flex-column align-items-center justify-content-between p-3 gap-3" style="border: solid var(--text-color) 2px">
-                            <p>Magic Roses Florist Web Application</p>
-                            <img src="src/MagicRoses_logo.png" alt="Magic Roses Florist Web Application Icon" width="70px" height="70px"/>
-                            <p style="text-align: justify;"> Magic Roses Florist Web Application is an business management system me and my team developed with Laravel for a real client. The stated client is "Magic Roses Florist", a family ran business in Sarawak that sells beautiful bouquet of flowers to their customer. The system allows customer to purchase products on the website and allows the client to keep track of it. The systems also provide features such as filtering, managing product, managing order, generating sales report, rate and review and more. </p>
-                            <p class="rounded-3 p-2 tech-stack">Tech Stack</p>
-                            <div class="d-flex rounded-3 p-2 tech-div">
-                                <span class="hovertext" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Laravel">
-                                    <img alt="Java" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/laravel/laravel-plain-wordmark.svg">
-                                </span>
-                                <span class="hovertext" data-bs-toggle="tooltip" data-bs-placement="bottom" title="HTML5">
-                                    <img alt="HTML5" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-plain-wordmark.svg">
-                                </span>
-                                <span class="hovertext" data-bs-toggle="tooltip" data-bs-placement="bottom" title="CSS3">
-                                    <img alt="css" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-plain.svg">
-                                </span>
-                                <span class="hovertext" data-bs-toggle="tooltip" data-bs-placement="bottom" title="JavaScript">
-                                    <img alt="js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
-                                </span>
-                                <span class="hovertext" data-bs-toggle="tooltip" data-bs-placement="bottom" title="PHP">
-                                    <img alt="php" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-plain.svg">
-                                </span>
-                                <span class="hovertext" data-bs-toggle="tooltip" data-bs-placement="bottom" title="MySQL">
-                                    <img alt="MySQL" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg">
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Health Diary -->
-                    <div class="carousel-item">
-                        <div class="container rounded-3 p-5 d-flex flex-column align-items-center justify-content-between p-3 gap-3" style="border: solid var(--text-color) 2px">
-                            <p>Health Diary</p>
-                            <img src="https://raw.githubusercontent.com/wenjuinchuah/java-project/main/src/images/favicon.png" alt="Health Diary Icon" width="70px" height="70px"/>
-                            <p style="text-align: justify;"> Health Diary is a java application that me and my team developed in year 2 Java course. It simulate a mobile application that gathers information and keep track of user's health.</p>
-                            <p class="rounded-3 p-2 tech-stack">Tech Stack</p>
-                            <div class="d-flex rounded-3 p-2 tech-div">
-                                <span class="hovertext" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Java">
-                                    <img alt="Java" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-plain.svg">
-                                </span>
-                            </div>
-                            <a class="m-2" href="https://github.com/wenjuinchuah/java-project" target="_blank">
-                                <button class="btn btn-primary">View on GitHub</button>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Blood Donation DBMS -->
-                    <div class="carousel-item">
-                        <div class="container rounded-3 p-5 d-flex flex-column align-items-center justify-content-between p-3 gap-3" style="border: solid var(--text-color) 2px">
-                            <p>Blood Donation DBMS</p>
-                            <img src="https://raw.githubusercontent.com/wenjuinchuah/database-project/main/src/blood_donation.png" alt="Blood Donation Icon" width="70px" height="70px"/>
-                            <p style="text-align: justify;"> Blood Donation Database Management System is a web application that me and my team developed for the year 2 Database Management coursework. It mainly focuses on the database design and management.</p>
-                            <p class="rounded-3 p-2 tech-stack">Tech Stack</p>
-                            <div class="d-flex rounded-3 p-2 tech-div">
-                                <span class="hovertext" data-bs-toggle="tooltip" data-bs-placement="bottom" title="HTML5">
-                                    <img alt="HTML5" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-plain-wordmark.svg">
-                                </span>
-                                <span class="hovertext" data-bs-toggle="tooltip" data-bs-placement="bottom" title="CSS3">
-                                    <img alt="css" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-plain.svg">
-                                </span>
-                                <span class="hovertext" data-bs-toggle="tooltip" data-bs-placement="bottom" title="JavaScript">
-                                    <img alt="js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
-                                </span>
-                                <span class="hovertext" data-bs-toggle="tooltip" data-bs-placement="bottom" title="PHP">
-                                    <img alt="php" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-plain.svg">
-                                </span>
-                                <span class="hovertext" data-bs-toggle="tooltip" data-bs-placement="bottom" title="MySQL">
-                                    <img alt="MySQL" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg">
-                                </span>
-                            </div>
-                            <a class="m-2" href="https://github.com/wenjuinchuah/database-project" target="_blank">
-                                <button class="btn btn-primary">View on GitHub</button>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Greenvy -->
-                    <div class="carousel-item">
-                        <div class="container rounded-3 p-5 d-flex flex-column align-items-center justify-content-between p-3 gap-3" style="border: solid var(--text-color) 2px;">
-                            <p>Greenvy</p>
-                            <img src="src/greenvy_icon.png" alt="Greenvy Icon" width="70px" height="70px"/>
-                            <p style="text-align: justify;"> 
-                                Greenvy is a mobile application me and my team developed using Flutter for the 2022 CodeNection Hackathon Competition. It is a mobile application aims to tackle SDG 13 (Climate Action). The mobile application contains a homepage with current 
-                                <button id="greenvyShowMoreBtn" class="btn text-muted" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGreenvy" aria-expanded="true">... Show More</button> 
-                                <span class="collapse" id="collapseGreenvy">environmental statistic and new, a comunity page that acts like a social media and lastly a page where the user has their own personal virtual tree that they can nurture and care.  </span>
-                                <button id="greenvyShowLessBtn" class="btn text-muted d-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGreenvy" aria-expanded="true">Show Less</button>
-                            </p>
-                            <p class="rounded-3 p-2 tech-stack">Tech Stack</p>
-                            <div class="d-flex rounded-3 p-2 tech-div">
-                                <span class="hovertext" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Dart">
-                                    <img alt="Dart" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/dart/dart-plain.svg">
-                            </div>
-                            <!--<a class="m-2" href="https://github.com/wenjuinchuah/greenvy" target="_blank">
-                                <button class="btn btn-primary">View on GitHub</button>
-                            </a>-->
-                        </div>
-                    </div>
-                    <!-- JS To Do List -->
-                    <div class="carousel-item">
-                        <div class="container rounded-3 p-5 d-flex flex-column align-items-center justify-content-between p-3 gap-3" style="border: solid var(--text-color) 2px">
-                            <p>JS To Do List</p>
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/electron/electron-original.svg" alt="JS To Do List Icon" width="70px" height="70px"/>
-                            <p style="text-align: justify;"> JS To Do List is an desktop application made using electron.js. It is a simple personal project made during free time to test out electron.js. It serves as a task management application that allows the user to keep track of their tasks. The application also allow some degree of customization such as changing the color and toggling dark mode.</p>
-                            <p class="rounded-3 p-2 tech-stack">Tech Stack</p>
-                            <div class="d-flex rounded-3 p-2 tech-div">
-                                <span class="hovertext" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Electron JS">
-                                    <img alt="electron js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/electron/electron-original.svg">
-                                </span>
-                                <span class="hovertext" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Node JS">
-                                    <img alt="node js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-plain.svg">
-                                </span>
-                                <span class="hovertext" data-bs-toggle="tooltip" data-bs-placement="bottom" title="HTML5">
-                                    <img alt="HTML5" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-plain-wordmark.svg">
-                                </span>
-                                <span class="hovertext" data-bs-toggle="tooltip" data-bs-placement="bottom" title="CSS3">
-                                    <img alt="css" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-plain.svg">
-                                </span>
-                                <span class="hovertext" data-bs-toggle="tooltip" data-bs-placement="bottom" title="JavaScript">
-                                    <img alt="js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
-                                </span>
-                            </div>
-                            <a class="m-2" href="https://github.com/Jeremikek/js-to-do-list" target="_blank">
-                                <button class="btn btn-primary">View on GitHub</button>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- JS Pong Game -->
-                    <div class="carousel-item">
-                        <div class="container rounded-3 p-5 d-flex flex-column align-items-center justify-content-between p-3 gap-3" style="border: solid var(--text-color) 2px">
-                            <p>JS Pong Game</p>
-                            <img src="src/pong_game_icon.png" alt="JS Pong Game Icon" width="70px" height="70px"/>
-                            <p style="text-align: justify;"> Another js application made with electron js. It is just a normal pong game made as an exercise. Player control their paddle with their mouse movement and try to win against the computer. There are 3 difficulty that can be choose from by the player, whereby the speed of the ball and computer is adjusted accordingly. </p>
-                            <p class="rounded-3 p-2 tech-stack">Tech Stack</p>
-                            <div class="d-flex rounded-3 p-2 tech-div">
-                                <span class="hovertext" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Electron JS">
-                                    <img alt="electron js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/electron/electron-original.svg">
-                                </span>
-                                <span class="hovertext" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Node JS">
-                                    <img alt="node js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-plain.svg">
-                                </span>
-                                <span class="hovertext" data-bs-toggle="tooltip" data-bs-placement="bottom" title="HTML5">
-                                    <img alt="HTML5" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-plain-wordmark.svg">
-                                </span>
-                                <span class="hovertext" data-bs-toggle="tooltip" data-bs-placement="bottom" title="CSS3">
-                                    <img alt="css" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-plain.svg">
-                                </span>
-                                <span class="hovertext" data-bs-toggle="tooltip" data-bs-placement="bottom" title="JavaScript">
-                                    <img alt="js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
-                                </span>
-                            </div>
-                            <a class="m-2" href="https://github.com/Jeremikek/js-to-do-list" target="_blank">
-                                <button class="btn btn-primary">View on GitHub</button>
-                            </a>
-                        </div>
-                    </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <div class="carousel-inner">
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
         </div>
 
+        <!--WORKING EXPERIENCE-->
+        <div class="container reveal fade-left section" id="workingexperience">
+            <h1>WORKING EXPERIENCE</h1>
+                <div class="d-flex flex-column flex-lg-row gap-5">
+                    <div class="d-flex flex-column flex-lg-row gap-5 mt-lg-5" style="border: 1px dotted white; width: 30%;">
+                        <div class="flex-fill rounded-3 p-2 m-2">
+                            <p>Internship at <b>Fusionex</b></p>
+                            <p>Duration: 6 months (02-2023 - 08-2023)</p>
+                            <p>Role: Software Developer</p>
+                            <p>Description: This was my first exposure to the IT working environment. I received training as a full-stack developer, creating websites and mobile applications using various tech stacks such as Angular, Flutter, Firebase, and MongoDB, while also developing the backend with Node.js and Swagger.</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
         <!--ACADEMIC BACKGROUND-->
-        <div class="container reveal fade-left section" id="academicbackground">
-            <h1>ACADEMIC BACKGROUND</h1>
+        <div class="container reveal fade-right section" id="academicbackground">
+            <h1 class="text-end">ACADEMIC BACKGROUND</h1>
             <div class="d-flex flex-column flex-lg-row text-center mt-5">
                 <div class="flex-fill rounded-3 p-2 m-2">
                     <p>SJK(C) Batu 14</p>
@@ -405,74 +308,27 @@
         </div>
 
         <!--SKILLS SET-->
-        <div class="container reveal fade-right section" id="skillsset">
-            <h1 class="text-end">SKILLS SET</h1>
+        <div class="container reveal fade-left section" id="skillsset">
+            <h1>SKILLS SET</h1>
             <div class="d-flex gap-5 mt-5 flex-column flex-lg-row">
                 <!-- Technical Skills -->
                 <div class="container text-center">
-                    <button class="btn btn-secondary w-100" type="button" data-bs-toggle="collapse" data-bs-target="#technicalDropdown" aria-expanded="false" aria-controls="technicalDropdown">TECHNICAL SKILLS</button>
+                    <button class="btn btn-secondary w-100" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#technicalDropdown" aria-expanded="false"
+                        aria-controls="technicalDropdown">TECHNICAL SKILLS</button>
                     <div id="technicalDropdown" class="collapse">
-                        <div class="d-flex flex-column gap-3 mt-3">
-                            <div onmouseover="skillsHover(this, 'Intermediate')" onmouseout="skillsHover(this, 'C')">
-                                C
-                            </div>
-                            <div onmouseover="skillsHover(this, 'Intermediate')" onmouseout="skillsHover(this, 'C++')">
-                                C++
-                            </div>
-                            <div onmouseover="skillsHover(this, 'Advanced')" onmouseout="skillsHover(this, 'Java')">
-                                Java
-                            </div>
-                            <div onmouseover="skillsHover(this, 'Advanced')" onmouseout="skillsHover(this, 'HTML5')">
-                                HTML5
-                            </div>
-                            <div onmouseover="skillsHover(this, 'Advanced')" onmouseout="skillsHover(this, 'JS')">
-                                JS
-                            </div>
-                            <div onmouseover="skillsHover(this, 'Advanced')" onmouseout="skillsHover(this, 'PHP')">
-                                PHP
-                            </div>
-                            <div onmouseover="skillsHover(this, 'Advanced')" onmouseout="skillsHover(this, 'MySQL')">
-                                MySQL
-                            </div>
-                            <div onmouseover="skillsHover(this, 'Intermediate')" onmouseout="skillsHover(this, 'CSS3')">
-                                CSS3
-                            </div>
-                            <div onmouseover="skillsHover(this, 'Intermediate')" onmouseout="skillsHover(this, 'Laravel')">
-                                Laravel
-                            </div>
-                            <div onmouseover="skillsHover(this, 'Beginner')" onmouseout="skillsHover(this, 'Flutter')">
-                                Flutter
-                            </div>
-                            <div onmouseover="skillsHover(this, 'Beginner')" onmouseout="skillsHover(this, 'Angular')">
-                                Angular
-                            </div>
-                            <div onmouseover="skillsHover(this, 'Beginner')" onmouseout="skillsHover(this, 'React')">
-                                React
-                            </div>
+                        <div class="d-flex flex-column gap-3 mt-3" id="technicalContainer">
                         </div>
                     </div>
                 </div>
 
                 <!-- Langugae Profficiency -->
                 <div class="container text-center">
-                    <button class="btn btn-secondary w-100" type="button" data-bs-toggle="collapse" data-bs-target="#languageDropdown" aria-expanded="false" aria-controls="languageDropdown">LANGUAGE PROFICIENCY</button>
+                    <button class="btn btn-secondary w-100" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#languageDropdown" aria-expanded="false"
+                        aria-controls="languageDropdown">LANGUAGE PROFICIENCY</button>
                     <div id="languageDropdown" class="collapse">
-                        <div class="d-flex flex-column gap-3 mt-3">
-                            <div onmouseover="skillsHover(this, 'Profecient')" onmouseout="skillsHover(this, 'Malay')">
-                                Malay
-                            </div>
-                            <div onmouseover="skillsHover(this, 'Native')" onmouseout="skillsHover(this, 'Chinese')" >
-                                Chinese
-                            </div>
-                            <div onmouseover="skillsHover(this, 'Professional')" onmouseout="skillsHover(this, 'English')" >
-                                English
-                            </div>
-                            <div onmouseover="skillsHover(this, 'Beginner')" onmouseout="skillsHover(this, 'Japanese')" >
-                                Japanese
-                            </div>
-                            <div onmouseover="skillsHover(this, 'Beginner')" onmouseout="skillsHover(this, 'French')" >
-                                French
-                            </div>
+                        <div class="d-flex flex-column gap-3 mt-3" id="languageContainer">
                         </div>
                     </div>
                 </div>
@@ -480,49 +336,343 @@
         </div>
 
         <!--ACADEMIC ACHIEVEMENT-->
-        <div class="container reveal fade-left section" id="academicachievement" style="margin-bottom: 200px;">
-            <h1>ACADEMIC ACHIEVEMENT</h1>
-            <div class="mt-5 d-flex flex-column gap-3">
-                <div class="container btn btn-secondary award">
-                    STPM - 3.17 CGPA
-                </div>
-                <div class="container btn btn-secondary award">
-                    MALAYSIAN UNIVERSITY ENGLISH TEST BAND 5
-                </div>
-                <div class="container btn btn-secondary award">
-                    DEAN LIST AWARD SEMESTER 1 (2020/2021) GPA-3.91
-                </div>
-                <div class="container btn btn-secondary award">
-                    DEAN LIST AWARD SEMESTER 2 (2020/2021) GPA-4.0
-                </div>
-                <div class="container btn btn-secondary award">
-                    DEAN LIST AWARD SEMESTER 3 (2021/2022) GPA-4.0
-                </div>
-                <div class="container btn btn-secondary award">
-                    DEAN LIST AWARD SEMESTER 4 (2021/2022) GPA-4.0
-                </div>
-                <div class="container btn btn-secondary award">
-                    2022 CodeNection Hackathon Finalist (4th Place)
-                </div>
+        <div class="container reveal fade-right section" id="academicachievement" style="margin-bottom: 200px;">
+            <h1 class="text-end">ACADEMIC ACHIEVEMENT</h1>
+            <div class="mt-5 d-flex flex-column gap-3" id="acaAchieveContainer">
             </div>
         </div>
     </div>
 
     <!--CONTACT ME-->
-    <div id="footer" class="container-fluid pt-3 mt-3" style="background-color: var(--nav-color); color: var(--text-secondary-color)">
-        <h1 class="text-center">CONTACT ME</h1>
+    <div id="footer" class="container-fluid pt-2"
+        style="background-color: var(--nav-color); color: var(--text-secondary-color)">
+        <h3 class="text-center">CONTACT ME</h3>
         <div class="d-flex justify-content-center gap-4">
             <a href="https://www.linkedin.com/in/jeremi-kek-175158227" target="_blank">
-                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linkedin/linkedin-plain.svg" alt="LinkedIn Icon" width="40px" style="filter: invert(100%);"/>
+                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linkedin/linkedin-plain.svg"
+                    alt="LinkedIn Icon" width="40px" style="filter: invert(100%);" />
             </a>
-            <a href="https://github.com/Jeremikek" target="_blank" >
-                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" alt="Github Icon" width="40px" style="filter: invert(100%);"/>
+            <a href="https://github.com/Jeremikek" target="_blank">
+                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg"
+                    alt="Github Icon" width="40px" style="filter: invert(100%);" />
             </a>
         </div>
-        <br/>
-    </div>  
+        <p class="text-center my-2">Last Updated July 2024</p>
+    </div>
 
     <script>
+        // generate previous project
+        let projects = [
+            {
+                "name": "SnapAndTax: Smart Tax Management System",
+                "description": `SnapAndTax is my final year project developed in 2024. It is a tax management tools that aims to aid Malaysian users with income tax related tasks, including income managment, reliefs management, automatic tax calculation, statistics and more. SnapAndTax consist of three components, SnapAndTax Mobile Application, SnapAndTax Main API, and SnapAndTax Reminder API. The mobile application is developed using Flutter and supports Android devices. The main API and reminder API are developed using Node JS. This project also includes various cloud services such as Firebase, Google Cloud Platform, and Microsoft Azure.`,
+                "skills": [
+                    "flutter",
+                    "dart",
+                    "nodeJS",
+                    "mongoDB",
+                    "firebase",
+                    "gcp",
+                    "azure",
+                ],
+                "imageSrc": "src/SnapAndTax_logo.png",
+                "externalLink": undefined
+            }, {
+                "name": "Magic Roses Florist Web Application",
+                "description": `Magic Roses Florist Web Application is an business management system me and my team developed with Laravel for a real client. The stated client is "Magic Roses Florist", a family ran business in Sarawak that sells beautiful bouquet of flowers to their customer. The system allows customer to purchase products on the website and allows the client to keep track of it. The systems also provide features such as filtering, managing product, managing order, generating sales report, rate and review and more.`,
+                "skills": [
+                    "laravel",
+                    "html5",
+                    "css",
+                    "js",
+                    "php",
+                    "mySQL",
+                    "bootstrap"
+                ],
+                "imageSrc": "src/MagicRoses_logo.png",
+                "externalLink": undefined
+            },
+            {
+                "name": "Health Diary",
+                "description": `Health Diary is a java application that me and my team developed in year 2 Java course. It simulate a mobile application that gathers information and keep track of user's health.`,
+                "skills": [
+                    "java"
+                ],
+                "imageSrc": "https://raw.githubusercontent.com/wenjuinchuah/java-project/main/src/images/favicon.png",
+                "externalLink": "https://github.com/wenjuinchuah/java-project"
+            },
+            {
+                "name": "Blood Donation DBMS",
+                "description": `Blood Donation Database Management System is a web application that me and my team developed for the year 2 Database Management coursework. It mainly focuses on the database design and management.`,
+                "skills": [
+                    "html5",
+                    "css",
+                    "js",
+                    "php",
+                    "mySQL",
+                    "bootstrap"
+                ],
+                "imageSrc": "https://raw.githubusercontent.com/wenjuinchuah/database-project/main/src/blood_donation.png",
+                "externalLink": "https://github.com/wenjuinchuah/database-project"
+            },
+            {
+                "name": "Greenvy",
+                "description": `Greenvy is a mobile application me and my team developed using Flutter for the 2022 CodeNection Hackathon Competition. It is a mobile application aims to tackle SDG (Climate Action). The mobile application contains a homepage with current environmental statistic and new, a comunity page that acts like a social media and lastly a page where the user has their own personal virtual tree that they can nurture and care.`,
+                "skills": [
+                    "dart",
+                    "flutter"
+                ],
+                "imageSrc": "src/greenvy_icon.png",
+                "externalLink": undefined
+            },
+            {
+                "name": "JS To Do List",
+                "description": `JS To Do List is an desktop application made using electron.js. It is a simple personal project made during free time to test out electron.js. It serves as a task management application that allows the user to keep track of their tasks. The application also allow some degree of customization such as changing the color and toggling dark mode.`,
+                "skills": [
+                    "electronJS",
+                    "nodeJS",
+                    "html5",
+                    "css",
+                    "js",
+                    "bootstrap"
+                ],
+                "imageSrc": "https://raw.githubusercontent.com/devicons/devicon/master/icons/electron/electron-original.svg",
+                "externalLink": "https://github.com/Jeremikek/js-to-do-list"
+            },
+            {
+                "name": "JS Pong Game",
+                "description": `Another JS application made with electron js. It is just a normal pong game made as an exercise. Player control their paddle with their mouse movement and try to win against the computer. There are 3 difficulty that can be choose from by the player, whereby the speed of the ball and computer is adjusted accordingly.`,
+                "skills": [
+                    "electronJS",
+                    "nodeJS",
+                    "html5",
+                    "css",
+                    "js",
+                    "bootstrap"
+                ],
+                "imageSrc": "src/pong_game_icon.png",
+                "externalLink": "https://github.com/Jeremikek/js-pong-game"
+            },
+            {
+                "name": "OpenHub",
+                "description": "This is the website application that my team and I developed during the NASA SpaceAppsSarawak 2023 Hackathon. It was created to address the challenge of 'A Marketplace for Open Science Projects'. Our goal was to provide a solution that enables open science project creators and skilled potential contributors to identify one another and facilitate communication.",
+                "skills": [
+                    "vue",
+                    "vuetify",
+                    "html5",
+                    "js",
+                    "css"
+                ],
+                "imageSrc": "src/openHub_logo.svg",
+                "externalLink": "https://github.com/Zejakob123/MakeItReal_OpenSourceMarketplace"
+            }
+        ];
+        let previousProjectPointer = document.getElementsByClassName('carousel-inner')[0];
+        for (let i = 0; i < projects.length; i++) {
+            let project = document.createElement('div');
+            project.classList.add('carousel-item');
+            if (i == 0) {
+                project.classList.add('active');
+            }
+            let projectContainer = document.createElement('div');
+            projectContainer.classList.add('container', 'rounded-3', 'p-5', 'd-flex',
+                'flex-column', 'align-items-center', 'justify-content-between', 'p-3', 'gap-3');
+            projectContainer.setAttribute('style', 'border: solid var(--text-color) 2px');
+            let skill = document.createElement('div');
+            skill.classList.add('d-flex', 'rounded-3', 'p-2', 'tech-div');
+
+            let name = document.createElement('p');
+            name.innerHTML = projects[i].name;
+            let img = document.createElement('img');
+            img.setAttribute('src', projects[i].imageSrc);
+            img.setAttribute('alt', `${projects[i].name} Icon`);
+            img.setAttribute('height', '70');
+            img.setAttribute('width', '70');
+
+            let description = document.createElement('p');
+            description.innerHTML = projects[i].description;
+
+            projectContainer.appendChild(name);
+            projectContainer.appendChild(img);
+            projectContainer.appendChild(description);
+
+            let skillTitle = document.createElement('p');
+            skillTitle.classList.add('rounded-3', 'p-2', 'tech-stack');
+            skillTitle.innerHTML = "Tech Stack";
+
+            projectContainer.appendChild(skillTitle);
+
+            for (let s = 0; s < projects[i].skills.length; s++) {
+                let span = document.createElement('span');
+                span.classList.add('hovertext');
+                let img = document.createElement('img');
+                img.setAttribute('alt', projects[i].skills[s]);
+                img.setAttribute('height', '30');
+                img.setAttribute('width', '40');
+                img.setAttribute('src', getSkillIcon(projects[i].skills[s]));
+                span.appendChild(img);
+                skill.appendChild(span);
+            }
+            projectContainer.appendChild(skill);
+
+            if (projects[i].externalLink) {
+                let link = document.createElement('a');
+                link.classList.add('m-2');
+                link.setAttribute('href', projects[i].externalLink);
+                link.setAttribute('target', '_blank');
+                let button = document.createElement('button');
+                button.classList.add('btn', 'btn-primary');
+                button.innerHTML = "View on GitHub";
+                link.appendChild(button);
+                projectContainer.appendChild(link);
+            }
+
+            project.appendChild(projectContainer);
+            previousProjectPointer.appendChild(project);
+        }
+        let carouselIndicator = document.getElementsByClassName('carousel-indicators')[0];
+        for (let i = 0; i < projects.length; i++) {
+            let button = document.createElement('button');
+            button.setAttribute('type', 'button');
+            button.setAttribute('data-bs-target', '#carouselExampleCaptions');
+            button.setAttribute('data-bs-slide-to', i);
+            if (i == 0) {
+                button.classList.add('active');
+                button.setAttribute('aria-current', 'true');
+            }
+            button.setAttribute('aria-label', `Slide ${i + 1}`);
+            carouselIndicator.appendChild(button);
+        }
+
+        // generate skills set
+        let technicalContainer = document.getElementById('technicalContainer');
+        let languageContainer = document.getElementById('languageContainer');
+        let technicalSkills = {
+            "C": "Beginner",
+            "C++": "Beginner",
+            "Java": "Intermediate",
+            "HTML5": "Advanced",
+            "JS": "Advanced",
+            "PHP": "Beginner",
+            "MySQL": "Advanced",
+            "CSS3": "Intermediate",
+            "Laravel": "Beginner",
+            "Flutter": "Advanced",
+            "Angular": "Intermediate",
+            "React": "Beginner",
+            "NodeJS": "Intermediate",
+            "MongoDB": "Beginner",
+            "Microsoft Azure": "Beginner",
+            "Firebase": "Beginner",
+        };
+        let languageSkills = {
+            "Malay": "Profecient",
+            "Chinese": "Native",
+            "English": "Professional",
+            "Japanese": "Beginner",
+            "French": "Beginner",
+        };
+        let technicalEntries = Object.entries(technicalSkills);
+        for (let i = 0; i < technicalEntries.length; i++) {
+            let skill = document.createElement('div');
+            skill.setAttribute('onmouseover', `skillsHover(this, '${technicalEntries[i][1]}')`);
+            skill.setAttribute('onmouseout', `skillsHover(this, '${technicalEntries[i][0]}')`);
+            skill.innerHTML = technicalEntries[i][0];
+            technicalContainer.appendChild(skill);
+        }
+        let languageEntries = Object.entries(languageSkills);
+        for (let i = 0; i < languageEntries.length; i++) {
+            let skill = document.createElement('div');
+            skill.setAttribute('onmouseover', `skillsHover(this, '${languageEntries[i][1]}')`);
+            skill.setAttribute('onmouseout', `skillsHover(this, '${languageEntries[i][0]}')`);
+            skill.innerHTML = languageEntries[i][0];
+            languageContainer.appendChild(skill);
+        }
+
+        // generate academic achievement
+        let achievements = [
+            "STPM - 3.17 CGPA",
+            "MALAYSIAN UNIVERSITY ENGLISH TEST BAND 5",
+            "DEAN LIST AWARD SEMESTER 1 (2020/2021) GPA-3.91",
+            "DEAN LIST AWARD SEMESTER 2 (2020/2021) GPA-4.0",
+            "DEAN LIST AWARD SEMESTER 1 (2021/2022) GPA-4.0",
+            "DEAN LIST AWARD SEMESTER 2 (2021/2022) GPA-4.0",
+            "2022 CODENECTION HACKATHON FINALIST (4TH PLACE)",
+            "DEAN LIST AWARD SEMESTER 1 (2022/2023) GPA-3.95",
+            "NASA Space Apps Challenge Sarawak 2023 - Senior Devision Champion (Team MakeItReal)",
+            "DEAN LIST AWARD SEMESTER 1 (2023/2024) GPA-4.0",
+        ];
+        let acaAchieveContainer = document.getElementById('acaAchieveContainer');
+        for (let i = 0; i < achievements.length; i++) {
+            let award = document.createElement('div');
+            award.classList.add('container', 'btn', 'btn-secondary', 'award');
+            award.innerHTML = achievements[i];
+            acaAchieveContainer.appendChild(award);
+        }
+
+        // get skill icon
+        function getSkillIcon(skill) {
+            switch (skill) {
+                case "angular":
+                    return "https://raw.githubusercontent.com/devicons/devicon/master/icons/angularjs/angularjs-original.svg";
+                    break;
+                case "css":
+                    return "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-plain.svg";
+                    break;
+                case "dart":
+                    return "https://raw.githubusercontent.com/devicons/devicon/master/icons/dart/dart-plain.svg";
+                    break;
+                case "electronJS":
+                    return "https://raw.githubusercontent.com/devicons/devicon/master/icons/electron/electron-original.svg";
+                    break;
+                case "flutter":
+                    return "https://raw.githubusercontent.com/devicons/devicon/master/icons/flutter/flutter-original.svg";
+                    break;
+                case "html5":
+                    return "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-plain-wordmark.svg";
+                    break;
+                case "js":
+                    return "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg";
+                    break;
+                case "java":
+                    return "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-plain.svg";
+                    break;
+                case "laravel":
+                    return "https://raw.githubusercontent.com/devicons/devicon/master/icons/laravel/laravel-original.svg";
+                    break;
+                case "mySQL":
+                    return "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg";
+                    break;
+                case "nodeJS":
+                    return "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-plain.svg";
+                    break;
+                case "php":
+                    return "https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-plain.svg";
+                    break;
+                case "bootstrap":
+                    return "https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original.svg";
+                    break;
+                case "vue":
+                    return "https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original.svg";
+                    break;
+                case "vuetify":
+                    return "https://raw.githubusercontent.com/devicons/devicon/master/icons/vuetify/vuetify-original.svg";
+                    break;
+                case "mongoDB":
+                    return "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg";
+                    break;
+                case "azure":
+                    return "https://raw.githubusercontent.com/devicons/devicon/master/icons/azure/azure-original.svg";
+                    break;
+                case "firebase":
+                    return "https://raw.githubusercontent.com/devicons/devicon/master/icons/firebase/firebase-plain.svg";
+                    break;
+                case "gcp":
+                    return "https://raw.githubusercontent.com/devicons/devicon/master/icons/googlecloud/googlecloud-original.svg";
+                    break;
+            }
+        }
+
         // check preferred color scheme
         function setColor() {
             let r = document.querySelector(':root');
@@ -543,7 +693,7 @@
                 r.style.setProperty('--nav-color', '#6d6d6d');
 
                 viewMode.classList.replace("bi-brightness-high", "bi-moon");
-            }else{
+            } else {
                 // light mode
                 icons.map(ele => ele.style.filter = "invert(0%)");
 
@@ -574,7 +724,7 @@
             let icons = document.getElementsByClassName("invert-icon");
             icons = Array.from(icons);
 
-            if(view.classList.contains('bi-moon')){
+            if (view.classList.contains('bi-moon')) {
                 icons.map(ele => { ele.style.filter = "invert(100%)" });
 
                 r.style.setProperty('--bg-color', '#E5E5E5');
@@ -586,7 +736,7 @@
                 r.style.setProperty('--nav-color', '#6A0DAD');
 
                 viewMode.classList.replace("bi-moon", "bi-brightness-high");
-            }else{
+            } else {
                 icons.map(ele => { ele.style.filter = "invert(0%)" });
 
                 r.style.setProperty('--bg-color', '#001c26');
@@ -600,8 +750,6 @@
                 viewMode.classList.replace("bi-brightness-high", "bi-moon");
             }
         }
-        
-        //setColor();
 
         // auto type graphics
         var typed = new Typed('#typed', {
@@ -612,23 +760,23 @@
         });
 
         // skills profficiency hover
-        function skillsHover(element, text){
+        function skillsHover(element, text) {
             element.innerHTML = text;
         }
 
         // tech stack hover
         var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
             return new bootstrap.Tooltip(tooltipTriggerEl)
         })
 
         // show more / less button
-        $('#collapseGreenvy').on("show.bs.collapse", ()=>{
+        $('#collapseGreenvy').on("show.bs.collapse", () => {
             $('#greenvyShowMoreBtn').addClass('d-none')
             $('#greenvyShowLessBtn').removeClass('d-none')
         });
 
-        $('#collapseGreenvy').on("hidden.bs.collapse", ()=>{
+        $('#collapseGreenvy').on("hidden.bs.collapse", () => {
             $('#greenvyShowLessBtn').addClass('d-none')
             $('#greenvyShowMoreBtn').removeClass('d-none')
         });
@@ -638,7 +786,7 @@
 
         function init() {
             const scrollbtn = document.getElementById("scrollbtn");
-            window.onscroll = function() {
+            window.onscroll = function () {
                 if (
                     document.body.scrollTop > 300 ||
                     document.documentElement.scrollTop > 300
@@ -675,25 +823,26 @@
                 let elementVisible = 150;
 
                 if (elementTop < windowHeight - elementVisible) {
-                reveals[i].classList.add("active");
+                    reveals[i].classList.add("active");
                 } else {
-                reveals[i].classList.remove("active");
+                    reveals[i].classList.remove("active");
                 }
             }
 
-            for(let i = 0; i < sections.length; i++) {
+            for (let i = 0; i < sections.length; i++) {
                 let windowHeight = window.innerHeight;
                 let elementTop = sections[i].getBoundingClientRect().top;
 
-                if((elementTop) < windowHeight) {
+                if ((elementTop) < windowHeight) {
                     activeLink(navGroup[i]);
                 }
             }
         }
 
         window.addEventListener("scroll", reveal);
-        
+
     </script>
 
 </body>
+
 </html>
